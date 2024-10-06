@@ -9,26 +9,19 @@ import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-jsx';
 import 'prismjs/components/prism-tsx';
-import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import DiscussionComponent from './DiscussionComponent';
 import { Share } from '@mui/icons-material';
-import QuizComponent from './QuizComponent'; // Add this import
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
 import { styled } from '@mui/material/styles';
 import { apiKey } from './const';
 import { exportToWord } from './exportToWord';
 import DiagramComponent from './DiagramComponent'; // Add this import
 import { useNavigate } from 'react-router-dom';
-import react from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
-import angular from 'react-syntax-highlighter/dist/esm/languages/prism/typescript';
 import { formatSummary } from './helper';
 import Cookies from 'js-cookie';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import TranscriptExtractor from './TranscriptExtractor';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import InfographicComponent from './InfographicComponent'; // Add this import
 import ExportToExcel from './ExportToExcel';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import SummarizeIcon from '@mui/icons-material/Summarize';
@@ -39,11 +32,10 @@ import KeywordIcon from '@mui/icons-material/Label';
 import ShareIcon from '@mui/icons-material/Share';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import TableChartIcon from '@mui/icons-material/TableChart';
-import { YoutubeTranscript } from 'youtube-transcript';
 import AutoSlideGenerator from './components/AutoSlideGenerator';
 import AutoFlashcardGenerator from './components/AutoFlashcardGenerator';
 import ExcelAnalyzer from './components/ExcelAnalyzer';
-import RDSpecCapabilityMeans from './components/RDSpecCapabilityMeans';
+import ImageAnalyzer from './components/ImageAnalyzer';
 import trizData from './data/triz.json';
 
 // Tạo một Accordion tùy chỉnh
@@ -142,6 +134,8 @@ const TextSummarizer = () => {
     const [excelAnalysis, setExcelAnalysis] = useState(null);
     const [trizAnalysis, setTrizAnalysis] = useState(null);
     const [trizSolution, setTrizSolution] = useState('');
+    const [inputPdf, setInputPdf] = useState('');
+    const [pdfSummary, setPdfSummary] = useState('');
 
     useEffect(() => {
         localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
@@ -930,6 +924,19 @@ const TextSummarizer = () => {
                                     </CustomAccordionDetails>
                                 </CustomAccordion>
                             }
+                            <CustomAccordion className="mt-4" isDarkMode={isDarkMode}>
+                                <CustomAccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="image-analysis-content"
+                                    id="image-analysis-header"
+                                    isDarkMode={isDarkMode}
+                                >
+                                    <Typography>Image Analysis</Typography>
+                                </CustomAccordionSummary>
+                                <CustomAccordionDetails isDarkMode={isDarkMode}>
+                                    <ImageAnalyzer isDarkMode={isDarkMode} />
+                                </CustomAccordionDetails>
+                            </CustomAccordion>
                         </div>
                     </Grid>
                 </Grid>
@@ -1086,15 +1093,6 @@ const TextSummarizer = () => {
                                 <ListItemText
                                     primary="Phương pháp TRIZ"
                                     secondary="Tìm kiếm giải pháp sáng tạo bằng phương pháp TRIZ"
-                                />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemIcon>
-                                    <TableChartIcon color="primary" />
-                                </ListItemIcon>
-                                <ListItemText
-                                    primary="Phân tích Excel"
-                                    secondary="Phân tích dữ liệu từ file Excel"
                                 />
                             </ListItem>
                             <ListItem>
