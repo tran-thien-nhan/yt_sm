@@ -1,0 +1,470 @@
+{
+    "parameters": [
+      {
+        "name": "R&D Spec/Capability/Means",
+        "description": "This parameter refers to all activities related to conceptualizing, trialing, beta-testing, verifying, and validating novel products, processes, or services before they are finalized and offered to customers. It encompasses both tangible and intangible elements, including knowledge, emotional qualities, physical artefacts, and functional services.",
+        "synonyms": [
+          "business concept innovation",
+          "new product development",
+          "proof-of-concept",
+          "pre-production",
+          "trial version",
+          "alpha",
+          "beta",
+          "experimental",
+          "novel",
+          "advanced",
+          "early adopter products/services",
+          "bread-board",
+          "Quality",
+          "output",
+          "defects",
+          "concessions",
+          "rapid-prototyping",
+          "advanced one-off manufacture methods",
+          "certification standards",
+          "qualification activities"
+        ],
+        "always_consider_principles": [
+          2,
+          10,
+          22,
+          25
+        ],
+        "averaged_principles": [
+          25,
+          2,
+          35,
+          15,
+          3,
+          13,
+          5,
+          11,
+          6,
+          10,
+          23,
+          38
+        ],
+        "conflicting_principles": {
+          "R&D Cost": [2, 4, 15, 38],
+          "R&D Time": [21, 38, 35, 23, 15],
+          "R&D Risk": [3, 9, 24, 23, 36, 11],
+          "R&D Interfaces": [3, 13, 24, 33, 38, 25],
+          "Production Spec/Capability/Means": [23, 29, 35, 4, 13, 5],
+          "Production Cost": [37, 35, 10, 3, 6],
+          "Production Time": [35, 6, 10, 2, 20]
+        }
+      },
+      {
+        "name": "R&D Cost",
+        "description": "The financial resources needed to conduct research and development activities.",
+        "conflicting_principles": {
+          "R&D Spec/Capability/Means": [2, 4, 15, 38]
+        }
+      },
+      {
+        "name": "R&D Time",
+        "description": "The duration required to complete research and development activities.",
+        "conflicting_principles": {
+          "R&D Spec/Capability/Means": [21, 38, 35, 23, 15]
+        }
+      },
+      {
+        "name": "R&D Risk",
+        "description": "The probability and potential impact of unforeseen challenges or failures during research and development.",
+        "conflicting_principles": {
+          "R&D Spec/Capability/Means": [3, 9, 24, 23, 36, 11]
+        }
+      },
+      {
+        "name": "R&D Interfaces",
+        "description": "The interactions and dependencies between different parts or teams involved in research and development.",
+        "conflicting_principles": {
+          "R&D Spec/Capability/Means": [3, 13, 24, 33, 38, 25]
+        }
+      },
+      {
+        "name": "Production Spec/Capability/Means",
+        "description": "The quality, efficiency, and resources needed to produce the final product, process, or service.",
+        "conflicting_principles": {
+          "R&D Spec/Capability/Means": [23, 29, 35, 4, 13, 5]
+        }
+      },
+      {
+        "name": "Production Cost",
+        "description": "The financial resources required to manufacture the final product, process, or service.",
+        "conflicting_principles": {
+          "R&D Spec/Capability/Means": [37, 35, 10, 3, 6]
+        }
+      },
+      {
+        "name": "Production Time",
+        "description": "The duration needed to manufacture the final product, process, or service.",
+        "conflicting_principles": {
+          "R&D Spec/Capability/Means": [35, 6, 10, 2, 20]
+        }
+      }
+    ],
+    "inventive_principles": [
+      {
+        "number": 1,
+        "name": "Segmentation",
+        "description": "Divide an object or system into independent parts.",
+        "examples": [
+          "Splitting a large task into smaller, manageable sub-tasks.",
+          "Separating components of a product for easier assembly and repair."
+        ]
+      },
+      {
+        "number": 2,
+        "name": "Taking Out",
+        "description": "Remove a part or element that is unnecessary or harmful.",
+        "examples": [
+          "Removing unnecessary features from a software application to simplify its interface.",
+          "Eliminating a component that causes friction in a mechanical system."
+        ]
+      },
+      {
+        "number": 3,
+        "name": "Local Quality",
+        "description": "Change the local quality of an object or system.",
+        "examples": [
+          "Using different materials or processes in specific areas of a product to improve its performance.",
+          "Modifying the design of a component to make it more resistant to wear and tear."
+        ]
+      },
+      {
+        "number": 4,
+        "name": "Asymmetry",
+        "description": "Make an object or system asymmetric.",
+        "examples": [
+          "Designing an asymmetrical airfoil to reduce drag.",
+          "Using different-sized wheels on a vehicle to improve stability."
+        ]
+      },
+      {
+        "number": 5,
+        "name": "Merging",
+        "description": "Combine similar or identical objects or systems.",
+        "examples": [
+          "Merging two separate software programs into a single integrated system.",
+          "Combining two different manufacturing processes to reduce production time."
+        ]
+      },
+      {
+        "number": 6,
+        "name": "Universality",
+        "description": "Make a part or system multi-functional.",
+        "examples": [
+          "Designing a tool that can perform multiple tasks.",
+          "Creating a software application that can be used on different platforms."
+        ]
+      },
+      {
+        "number": 7,
+        "name": "Nesting",
+        "description": "Place one object inside another.",
+        "examples": [
+          "Designing a retractable antenna that fits inside a small space.",
+          "Using nested containers to reduce packaging waste."
+        ]
+      },
+      {
+        "number": 8,
+        "name": "Counterweight",
+        "description": "Add a counterweight to an object or system to balance it.",
+        "examples": [
+          "Using a counterweight to stabilize a crane.",
+          "Adding a counterbalance to a door to make it easier to open."
+        ]
+      },
+      {
+        "number": 9,
+        "name": "Preliminary Action",
+        "description": "Perform a preliminary action to prepare an object or system for its intended use.",
+        "examples": [
+          "Pre-heating a furnace before casting a metal part.",
+          "Pre-loading a spring to improve its performance."
+        ]
+      },
+      {
+        "number": 10,
+        "name": "Prior Action",
+        "description": "Carry out an action before the main process.",
+        "examples": [
+          "Performing a pre-flight check before taking off in an airplane.",
+          "Using a primer to improve the adhesion of paint."
+        ]
+      },
+      {
+        "number": 11,
+        "name": "Beforehand Cushion",
+        "description": "Create a buffer or cushion to prevent damage or failure.",
+        "examples": [
+          "Using a shock absorber to absorb impacts.",
+          "Building a safety margin into a product to account for variations in manufacturing."
+        ]
+      },
+      {
+        "number": 12,
+        "name": "Equi-action",
+        "description": "Perform actions simultaneously or in a coordinated manner.",
+        "examples": [
+          "Using a two-handed operation to increase efficiency.",
+          "Synchronizing the movements of multiple robots in a manufacturing process."
+        ]
+      },
+      {
+        "number": 13,
+        "name": "Other Dimension",
+        "description": "Move an object or system into another dimension.",
+        "examples": [
+          "Using a multi-layer design to increase the storage capacity of a product.",
+          "Transferring data to a cloud-based server to improve accessibility."
+        ]
+      },
+      {
+        "number": 14,
+        "name": "Spheroidality",
+        "description": "Change the shape of an object or system to a sphere.",
+        "examples": [
+          "Using spherical bearings to reduce friction.",
+          "Designing a spherical tank to maximize storage capacity."
+        ]
+      },
+      {
+        "number": 15,
+        "name": "Dynamicity",
+        "description": "Make an object or system dynamic.",
+        "examples": [
+          "Using a variable-speed motor to control the speed of a machine.",
+          "Designing a self-adjusting mechanism to compensate for wear and tear."
+        ]
+      },
+      {
+        "number": 16,
+        "name": "Partial or Excessive Action",
+        "description": "Perform an action partially or excessively.",
+        "examples": [
+          "Using a partial cut to reduce the weight of a component.",
+          "Applying an excessive force to break a material."
+        ]
+      },
+      {
+        "number": 17,
+        "name": "Another Dimension",
+        "description": "Change the direction of action or movement.",
+        "examples": [
+          "Using a vertical instead of a horizontal orientation to save space.",
+          "Changing the direction of flow in a fluid system."
+        ]
+      },
+      {
+        "number": 18,
+        "name": "Mechanical Vibration",
+        "description": "Introduce mechanical vibration or oscillation.",
+        "examples": [
+          "Using a vibrating screen to separate materials.",
+          "Applying vibration to a welding process to improve the quality of the weld."
+        ]
+      },
+      {
+        "number": 19,
+        "name": "Periodic Action",
+        "description": "Perform an action periodically or intermittently.",
+        "examples": [
+          "Using a pulsed laser to cut or engrave materials.",
+          "Applying a periodic force to a system to maintain its stability."
+        ]
+      },
+      {
+        "number": 20,
+        "name": "Continuity of Useful Action",
+        "description": "Make an action continuous or uninterrupted.",
+        "examples": [
+          "Using a continuous conveyor belt to move materials.",
+          "Designing a self-cleaning system to prevent buildup of dirt."
+        ]
+      },
+      {
+        "number": 21,
+        "name": "Rushing Through",
+        "description": "Perform an action at high speed.",
+        "examples": [
+          "Using a high-speed press to form a metal part.",
+          "Applying a rapid pulse of energy to a system."
+        ]
+      },
+      {
+        "number": 22,
+        "name": "Convert to a Mechanical System",
+        "description": "Convert a non-mechanical system to a mechanical one.",
+        "examples": [
+          "Using a robotic arm to perform a task that was previously done manually.",
+          "Automating a process that was previously done manually."
+        ]
+      },
+      {
+        "number": 23,
+        "name": "Feedback",
+        "description": "Introduce feedback into a system to control its behavior.",
+        "examples": [
+          "Using a thermostat to regulate the temperature of a room.",
+          "Introducing feedback into a manufacturing process to ensure quality control."
+        ]
+      },
+      {
+        "number": 24,
+        "name": "Intermediary",
+        "description": "Use an intermediary object or system.",
+        "examples": [
+          "Using a tool to perform a task that is difficult or impossible to do by hand.",
+          "Introducing a mediator to resolve a conflict between two parties."
+        ]
+      },
+      {
+        "number": 25,
+        "name": "Self-Service",
+        "description": "Make an object or system self-servicing.",
+        "examples": [
+          "Designing a self-cleaning oven.",
+          "Creating a software application that automatically updates itself."
+        ]
+      },
+      {
+        "number": 26,
+        "name": "Copying",
+        "description": "Copy a part or element of an object or system.",
+        "examples": [
+          "Using a template to create multiple identical parts.",
+          "Replicating a successful design."
+        ]
+      },
+      {
+        "number": 27,
+        "name": "Cheap Disposable",
+        "description": "Make an object or system disposable and inexpensive.",
+        "examples": [
+          "Using disposable cups or plates to reduce cleanup.",
+          "Producing a product with a low cost of manufacture."
+        ]
+      },
+      {
+        "number": 28,
+        "name": "Replace Mechanical System",
+        "description": "Replace a mechanical system with a non-mechanical one.",
+        "examples": [
+          "Using a software program to control a machine.",
+          "Replacing a mechanical valve with a digital one."
+        ]
+      },
+      {
+        "number": 29,
+        "name": "Pneumatics and Hydraulics",
+        "description": "Use pneumatics or hydraulics.",
+        "examples": [
+          "Using a pneumatic actuator to move a heavy object.",
+          "Utilizing hydraulics to power a crane."
+        ]
+      },
+      {
+        "number": 30,
+        "name": "Flexible Shells and Thin Films",
+        "description": "Use flexible shells and thin films.",
+        "examples": [
+          "Using a flexible membrane to seal a container.",
+          "Applying a thin film to a surface to protect it."
+        ]
+      },
+      {
+        "number": 31,
+        "name": "Porous Materials",
+        "description": "Use porous materials.",
+        "examples": [
+          "Using a filter to remove impurities from a liquid.",
+          "Designing a porous material to absorb moisture."
+        ]
+      },
+      {
+        "number": 32,
+        "name": "Changing Color",
+        "description": "Change the color of an object or system.",
+        "examples": [
+          "Using color to improve the visibility of a product.",
+          "Changing the color of a surface to reflect more or less heat."
+        ]
+      },
+      {
+        "number": 33,
+        "name": "Homogeneity",
+        "description": "Make an object or system homogeneous.",
+        "examples": [
+          "Using a single material to manufacture a product.",
+          "Creating a uniform surface to reduce friction."
+        ]
+      },
+      {
+        "number": 34,
+        "name": "Discarding and Recycling",
+        "description": "Discard or recycle parts or elements of an object or system.",
+        "examples": [
+          "Using a reusable container instead of a disposable one.",
+          "Recycling materials to reduce waste."
+        ]
+      },
+      {
+        "number": 35,
+        "name": "Parameter Changes",
+        "description": "Change the parameter of an object or system.",
+        "examples": [
+          "Changing the size or shape of a component to improve its performance.",
+          "Adjusting the operating temperature or pressure of a system."
+        ]
+      },
+      {
+        "number": 36,
+        "name": "Phase Transition",
+        "description": "Use a phase transition.",
+        "examples": [
+          "Using a change in temperature to melt or solidify a material.",
+          "Utilizing a change in pressure to cause a gas to condense."
+        ]
+      },
+      {
+        "number": 37,
+        "name": "Thermal Expansion",
+        "description": "Use thermal expansion or contraction.",
+        "examples": [
+          "Using a bimetallic strip to control a thermostat.",
+          "Utilizing thermal expansion to create a seal."
+        ]
+      },
+      {
+        "number": 38,
+        "name": "Strong Oxidants",
+        "description": "Use strong oxidants.",
+        "examples": [
+          "Using oxygen to accelerate a combustion process.",
+          "Utilizing ozone to disinfect a surface."
+        ]
+      },
+      {
+        "number": 39,
+        "name": "Inert Atmosphere",
+        "description": "Use an inert atmosphere.",
+        "examples": [
+          "Using nitrogen to prevent oxidation of a material.",
+          "Creating an inert environment to prevent contamination."
+        ]
+      },
+      {
+        "number": 40,
+        "name": "Composite Materials",
+        "description": "Use composite materials.",
+        "examples": [
+          "Using fiberglass to create a lightweight and strong material.",
+          "Combining different materials to create a material with specific properties."
+        ]
+      }
+    ]
+  }
