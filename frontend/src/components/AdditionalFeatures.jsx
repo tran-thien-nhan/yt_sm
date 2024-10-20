@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Typography, Button } from '@mui/material';
+=======
+import React, { useState } from 'react';
+import { Typography, Button, Modal, Box, CircularProgress } from '@mui/material';
+>>>>>>> c0075df (Reinitialize Git repository)
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { CustomAccordion, CustomAccordionSummary, CustomAccordionDetails } from './StyledComponents';
 import DiagramSection from './DiagramSection';
@@ -8,6 +13,11 @@ import AutoFlashcardGenerator from './AutoFlashcardGenerator';
 import ExcelAnalyzer from './ExcelAnalyzer';
 import ImageAnalyzer from './ImageAnalyzer';
 import DiscussionComponent from '../DiscussionComponent';
+<<<<<<< HEAD
+=======
+import { formatSummary, handleMoreSolutions } from '../helper';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+>>>>>>> c0075df (Reinitialize Git repository)
 
 const AdditionalFeatures = ({
     summary,
@@ -29,10 +39,56 @@ const AdditionalFeatures = ({
     diagramKey,
     trizAnalysis,
     trizSolution,
+<<<<<<< HEAD
     handleExcelAnalysis,
     excelAnalysis,
     handleSummarize
 }) => {
+=======
+    setTrizSolution,
+    api,
+    handleExcelAnalysis,
+    excelAnalysis,
+    handleSummarize,
+    trizMoreSolutions,
+    setTrizMoreSolutions,
+    isTrizModalOpen,
+    setIsTrizModalOpen,
+    handleOpenTrizModal,
+    handleCloseTrizModal
+}) => {
+    const [isLoadingMoreSolutions, setIsLoadingMoreSolutions] = useState(false);
+
+    const handleOpenMoreSolutions = async () => {
+        setIsLoadingMoreSolutions(true);
+        setIsTrizModalOpen(true);
+        try {
+            await handleMoreSolutions(trizAnalysis, api, setTrizSolution, setTrizMoreSolutions);
+        } catch (error) {
+            console.error('Error generating more solutions:', error);
+            setTrizMoreSolutions('Đã xảy ra lỗi khi tạo thêm giải pháp.');
+        } finally {
+            setIsLoadingMoreSolutions(false);
+        }
+    };
+
+    // Function to close the modal
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+
+    const handleCopyContent = () => {
+        navigator.clipboard.writeText(trizMoreSolutions)
+            .then(() => {
+                // Optionally, you can show a success message or update UI
+                console.log('Content copied to clipboard');
+            })
+            .catch(err => {
+                console.error('Failed to copy content: ', err);
+            });
+    };
+
+>>>>>>> c0075df (Reinitialize Git repository)
     return (
         <>
             {summary && (
@@ -108,6 +164,17 @@ const AdditionalFeatures = ({
                             <div className="mt-4">
                                 <Typography variant="h6">Creative Solution:</Typography>
                                 <Typography>{trizSolution}</Typography>
+<<<<<<< HEAD
+=======
+                                <Button
+                                    variant="contained"
+                                    color="primary"
+                                    onClick={handleOpenMoreSolutions}
+                                    sx={{ mt: 2, mr: 2 }}
+                                >
+                                    More Solutions
+                                </Button>
+>>>>>>> c0075df (Reinitialize Git repository)
                             </div>
                         )}
                     </CustomAccordionDetails>
@@ -149,6 +216,56 @@ const AdditionalFeatures = ({
                     <ImageAnalyzer isDarkMode={isDarkMode} />
                 </CustomAccordionDetails>
             </CustomAccordion>
+<<<<<<< HEAD
+=======
+
+            <Modal
+                open={isTrizModalOpen}
+                onClose={handleCloseTrizModal}
+                aria-labelledby="more-solutions-modal"
+                aria-describedby="more-triz-solutions"
+            >
+                <Box sx={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: '80%', // Increased width
+                    maxWidth: 800, // Maximum width
+                    maxHeight: '90vh', // Maximum height
+                    bgcolor: 'background.paper',
+                    border: '2px solid #000',
+                    boxShadow: 24,
+                    p: 4,
+                    overflowY: 'auto', // Enable vertical scrolling
+                }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2 }}>
+                        <Typography id="more-solutions-modal" variant="h6" component="h2" sx={{ color: 'white' }}>
+                            Additional TRIZ Solutions
+                        </Typography>
+                        <Button
+                            onClick={handleCopyContent}
+                            startIcon={<ContentCopyIcon />}
+                            sx={{ color: 'white' }}
+                        >
+                            Copy
+                        </Button>
+                    </Box>
+                    {isLoadingMoreSolutions ? (
+                        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+                            <CircularProgress />
+                        </Box>
+                    ) : (
+                        <Typography id="more-triz-solutions" sx={{ mt: 2, color: 'white' }}>
+                            {formatSummary(trizMoreSolutions) || 'No additional solutions available.'}
+                        </Typography>
+                    )}
+                    <Button onClick={handleCloseModal} sx={{ mt: 2 }}>
+                        Close
+                    </Button>
+                </Box>
+            </Modal>
+>>>>>>> c0075df (Reinitialize Git repository)
         </>
     );
 };

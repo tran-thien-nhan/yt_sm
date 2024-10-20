@@ -36,6 +36,7 @@ const ActionButtons = ({
     }
   };
 
+<<<<<<< HEAD
   // Remove this function as it's no longer needed
   // const handleTrizClick = async () => {
   //   setIsTrizLoading(true);
@@ -46,6 +47,8 @@ const ActionButtons = ({
   //   }
   // };
 
+=======
+>>>>>>> c0075df (Reinitialize Git repository)
   return (
     <div className="mb-4">
       <h3 className="text-lg font-semibold mb-2">Keywords:</h3>

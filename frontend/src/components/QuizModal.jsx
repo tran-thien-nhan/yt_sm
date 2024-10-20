@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> c0075df (Reinitialize Git repository)
 import { Modal, Typography, Button, Radio, RadioGroup, FormControlLabel, FormControl, Box, IconButton } from '@mui/material';
 import { Document, Packer, Paragraph, TextRun } from 'docx';
 import { saveAs } from 'file-saver';
@@ -100,6 +104,19 @@ const QuizModal = ({ isOpen, onClose, questions, isDarkMode }) => {
     });
   };
 
+<<<<<<< HEAD
+=======
+  useEffect(() => {
+    if (questions && questions.length > 0) {
+      const distribution = questions.reduce((acc, q) => {
+        acc[q.correctAnswer] = (acc[q.correctAnswer] || 0) + 1;
+        return acc;
+      }, {});
+      console.log("Phân bố đáp án đúng trong QuizModal:", distribution);
+    }
+  }, [questions]);
+
+>>>>>>> c0075df (Reinitialize Git repository)
   return (
     <Modal
       open={isOpen}

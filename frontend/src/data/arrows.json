@@ -1,0 +1,98 @@
+{
+  "title": "Các mũi tên trong thần số học",
+  "introduction": {
+    "definition": "Mũi tên trong thần số học được tạo thành từ ba con số thẳng hàng (ngang, dọc hoặc chéo) cho thấy những đặc điểm tính cách, tài năng và thách thức tiềm ẩn mỗi người.",
+    "determination": "Các mũi tên được xác định dựa vào biểu đồ ngày sinh và biểu đồ tên trong thần số học của mỗi con người.",
+    "formation": "Khi có 3 con số nằm kế tiếp nhau theo trục dọc, trục ngang hoặc trục chéo sẽ tạo ra mũi tên cá tính. Khi vắng mặt cả 3 con số sẽ tạo ra mũi tên chỉ ra nhược điểm."
+  },
+  "types": {
+    "total": 15,
+    "positive": 8,
+    "negative": 7
+  },
+  "positiveArrows": [
+    {
+      "name": "Mũi tên kế hoạch",
+      "numbers": "1-2-3",
+      "meaning": "Khả năng lập kế hoạch, tổ chức và thực hiện mục tiêu"
+    },
+    {
+      "name": "Mũi tên quyết tâm",
+      "numbers": "1-5-9",
+      "meaning": "Sự kiên trì, quyết tâm và khả năng vượt qua khó khăn"
+    },
+    {
+      "name": "Mũi tên nhạy bén",
+      "numbers": "3-5-7",
+      "meaning": "Trực giác nhạy bén, khả năng phân tích và sự tò mò"
+    },
+    {
+      "name": "Mũi tên trí tuệ",
+      "numbers": "3-6-9",
+      "meaning": "Tư duy logic, khả năng sáng tạo và trí nhớ tốt"
+    },
+    {
+      "name": "Mũi tên ý chí",
+      "numbers": "4-5-6",
+      "meaning": "Sự kiên cường, can đảm và khả năng vượt qua mọi trở ngại với sự khôn ngoan và thông thái"
+    },
+    {
+      "name": "Mũi tên hành động",
+      "numbers": "7-8-9",
+      "meaning": "Sự kết hợp giữa trải nghiệm, trực giác và lý tưởng làm thúc đẩy hành động"
+    },
+    {
+      "name": "Mũi tên thực tế",
+      "numbers": "1-4-7",
+      "meaning": "Sự thực tế, khả năng hiện thực hóa ý tưởng và sự tập trung vào thế giới vật chất"
+    },
+    {
+      "name": "Mũi tên cân bằng cảm xúc",
+      "numbers": "2-5-8",
+      "meaning": "Khả năng cân bằng cảm xúc, trực giác nhạy bén và khả năng thấu hiểu người khác"
+    }
+  ],
+  "negativeArrows": [
+    {
+      "name": "Mũi tên hỗn hợp",
+      "numbers": "trống 1-4-7",
+      "meaning": "Thiếu thực tế, kiên nhẫn, gặp nhiều khó khăn trong việc sắp xếp, thiếu tự tin vào bản thân"
+    },
+    {
+      "name": "Mũi tên nhạy cảm",
+      "numbers": "trống 2-5-8",
+      "meaning": "Sự thiếu hụt hoặc mất cân bằng trong cảm xúc"
+    },
+    {
+      "name": "Mũi tên trí nhớ ngắn hạn",
+      "numbers": "trống 3-6-9",
+      "meaning": "Khó tập trung, hay quên và thiếu kiên nhẫn"
+    },
+    {
+      "name": "Mũi tên uất giận",
+      "numbers": "trống 4-5-6",
+      "meaning": "Thiếu kiên nhẫn, dễ nản lòng, thiếu quyết đoán, thiếu tự tin, dễ bị cảm xúc tiêu cực chi phối"
+    },
+    {
+      "name": "Mũi tên thụ động",
+      "numbers": "trống 7-8-9",
+      "meaning": "Thiếu động lực, sự chủ động, quyết đoán và tự tin"
+    },
+    {
+      "name": "Mũi tên hoài nghi",
+      "numbers": "trống 3-5-7",
+      "meaning": "Thiếu tin tưởng, hay nghi ngờ và khó đưa ra quyết định"
+    },
+    {
+      "name": "Mũi tên trì hoãn",
+      "numbers": "trống 1-5-9",
+      "meaning": "Thiếu quyết đoán, hay trì hoãn và khó tập trung"
+    }
+  ],
+  "noArrows": {
+    "explanation": "Người không có các mũi tên trong thần số học là người không có sự xuất hiện của 3 con số liền kề hoặc không có 3 ô trống nào trong biểu đồ của họ tạo thành một đường ngang, đường dọc hoặc đường chéo.",
+    "characteristics": "Những người này không phải là không có ưu điểm hay nhược điểm, mà cá tính của họ không quá nổi bật.",
+    "advice": "Người không có các mũi tên trong thần số học chỉ cần sống tích cực và hoàn thiện bản thân mỗi ngày thì mọi thứ sẽ phát triển."
+  }
+}
+

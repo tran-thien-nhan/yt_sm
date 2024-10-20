@@ -63,6 +63,18 @@ const DiscussionComponent = ({ summary, selectedText, setSelectedText, isModalOp
     palette: {
       mode: isDarkMode ? 'dark' : 'light',
     },
+<<<<<<< HEAD
+=======
+    components: {
+      MuiModal: {
+        styleOverrides: {
+          root: {
+            zIndex: 1300, // Lower than AdditionalFeatures modal
+          },
+        },
+      },
+    },
+>>>>>>> c0075df (Reinitialize Git repository)
   });
 
   useEffect(() => {
@@ -101,7 +113,11 @@ const DiscussionComponent = ({ summary, selectedText, setSelectedText, isModalOp
   const handleTextSelection = () => {
     const selection = window.getSelection();
     const text = selection.toString().trim();
+<<<<<<< HEAD
     if (text && !isModalOpen) {
+=======
+    if (text) {
+>>>>>>> c0075df (Reinitialize Git repository)
       setSelectedText(text);
       setIsModalOpen(true);
     }
@@ -480,6 +496,10 @@ Trả lời:`
             boxShadow: 24,
             p: 4,
             color: isDarkMode ? 'white' : 'inherit',
+<<<<<<< HEAD
+=======
+            zIndex: 1400, // Lower than AdditionalFeatures modal
+>>>>>>> c0075df (Reinitialize Git repository)
           }}>
             <Typography id="selected-text-modal-title" variant="h6" component="h2" sx={{ mb: 2, color: isDarkMode ? 'white' : 'inherit' }}>
               Bạn có muốn đặt câu hỏi với nội dung đã chọn?
@@ -606,6 +626,7 @@ Trả lời:`
                 <span className="sr-only">Previous</span>
                 <span aria-hidden="true">&lsaquo;</span>
               </button>
+<<<<<<< HEAD
               {[...Array(Math.ceil(questions.length / questionsPerPage)).keys()].map((number) => (
                 <button
                   key={number + 1}
@@ -616,6 +637,13 @@ Trả lời:`
                   {number + 1}
                 </button>
               ))}
+=======
+              <button
+                className="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-blue-600 bg-blue-50"
+              >
+                {currentPage}
+              </button>
+>>>>>>> c0075df (Reinitialize Git repository)
               <button
                 onClick={() => paginate(currentPage + 1)}
                 disabled={currentPage === Math.ceil(questions.length / questionsPerPage)}

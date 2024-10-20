@@ -14,7 +14,11 @@ import SummarySection from './components/SummarySection';
 import HelpModal from './components/HelpModal';
 import ActionButtons from './components/ActionButtons';
 import AdditionalFeatures from './components/AdditionalFeatures';
+<<<<<<< HEAD
 import { Grid, IconButton, Switch } from '@mui/material';
+=======
+import { Box, Grid, IconButton, Paper, Switch } from '@mui/material';
+>>>>>>> c0075df (Reinitialize Git repository)
 import ScrollButtons from './components/ScrollButtons';
 import { useSummarizerState } from './hooks/useSummarizerState';
 import { createSummarizerHandlers } from './utils/summarizerHandlers';
@@ -22,6 +26,10 @@ import PromptModal from './components/PromptModal';
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import QuizModal from './components/QuizModal'; // Tạo component này sau
+<<<<<<< HEAD
+=======
+import ChatPractice from './components/ChatPractice';
+>>>>>>> c0075df (Reinitialize Git repository)
 
 const TextSummarizer = () => {
     const state = useSummarizerState();
@@ -41,7 +49,16 @@ const TextSummarizer = () => {
         copyFeedback, isHelpModalOpen,
         selectedLanguage, setSelectedLanguage, // Add these lines
         quizQuestions, isQuizModalOpen, isLoadingQuiz, setIsLoadingQuiz,
+<<<<<<< HEAD
         isLoadingTriz,
+=======
+        isLoadingTriz, setTrizSolution, setTrizAnalysis,
+        trizMoreSolutions, setTrizMoreSolutions,
+        isTrizModalOpen, setIsTrizModalOpen,
+        customPrompt, setCustomPrompt,
+        selectedIeltsTypes, setSelectedIeltsTypes,
+        selectedIeltsListeningTypes, setSelectedIeltsListeningTypes
+>>>>>>> c0075df (Reinitialize Git repository)
     } = state;
 
     const {
@@ -51,6 +68,11 @@ const TextSummarizer = () => {
         handleCreateDiagram, handleExcelAnalysis, handleSummarize,
         handleOpenHelpModal, handleCloseHelpModal,
         handleCreateQuizTest, handleCloseQuizModal,
+<<<<<<< HEAD
+=======
+        handleMoreSolutions: handleMoreSolutionsClick,
+        handleOpenTrizModal, handleCloseTrizModal
+>>>>>>> c0075df (Reinitialize Git repository)
     } = handlers;
 
     const theme = createTheme({
@@ -77,7 +99,11 @@ const TextSummarizer = () => {
                         <div className={`p-4 md:p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
                             <div className="flex justify-between items-center mb-4">
                                 <div className="flex items-center">
+<<<<<<< HEAD
                                     <h1 className={`text-xl md:text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-black'}`}>Text Summarizer</h1>
+=======
+                                    <h1 className={`text-xl md:text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-black'}`}>Summarizer</h1>
+>>>>>>> c0075df (Reinitialize Git repository)
                                     <IconButton onClick={handleOpenHelpModal} color="primary" aria-label="help">
                                         <HelpOutlineIcon />
                                     </IconButton>
@@ -102,6 +128,15 @@ const TextSummarizer = () => {
                                 isDarkMode={isDarkMode}
                                 selectedLanguage={selectedLanguage}
                                 setSelectedLanguage={setSelectedLanguage}
+<<<<<<< HEAD
+=======
+                                customPrompt={customPrompt}
+                                setCustomPrompt={setCustomPrompt}
+                                selectedIeltsTypes={selectedIeltsTypes}
+                                setSelectedIeltsTypes={setSelectedIeltsTypes}
+                                selectedIeltsListeningTypes={selectedIeltsListeningTypes}
+                                setSelectedIeltsListeningTypes={setSelectedIeltsListeningTypes}
+>>>>>>> c0075df (Reinitialize Git repository)
                             />
                             <div className="mt-4 md:mt-6">
                                 {keywords.length > 0 && (
@@ -149,9 +184,23 @@ const TextSummarizer = () => {
                                         </AccordionDetails>
                                     </Accordion>
                                 )}
+<<<<<<< HEAD
                                 {/* {errorMessage && (
                                     <p className="text-red-600 mt-2 text-sm">{errorMessage}</p>
                                 )} */}
+=======
+                                {(selectedPrompt === 'ielts_speaking_practice' || selectedPrompt === 'english_conversation') && (
+                                    <Paper elevation={3} className="mt-6 w-full">
+                                        <Box className="bg-gray-50 dark:bg-gray-800 w-full">
+                                            <ChatPractice
+                                                practiceType={selectedPrompt === 'ielts_speaking_practice' ? 'ielts_speaking' : 'english_conversation'}
+                                                topic={inputText}
+                                                className="w-full"
+                                            />
+                                        </Box>
+                                    </Paper>
+                                )}
+>>>>>>> c0075df (Reinitialize Git repository)
                             </div>
                         </div>
                     </Grid>
@@ -177,11 +226,26 @@ const TextSummarizer = () => {
                                 diagramKey={diagramKey}
                                 trizAnalysis={trizAnalysis}
                                 trizSolution={trizSolution}
+<<<<<<< HEAD
+=======
+                                setTrizSolution={setTrizSolution}
+                                trizMoreSolutions={trizMoreSolutions}
+                                setTrizMoreSolutions={setTrizMoreSolutions}
+>>>>>>> c0075df (Reinitialize Git repository)
                                 handleExcelAnalysis={handleExcelAnalysis}
                                 excelAnalysis={excelAnalysis}
                                 handleSummarize={handleSummarize}
                                 isLoadingTriz={isLoadingTriz}
                                 isLoadingQuiz={isLoadingQuiz}
+<<<<<<< HEAD
+=======
+                                handleMoreSolutions={handleMoreSolutionsClick}
+                                api={apiKey}
+                                handleOpenTrizModal={handleOpenTrizModal}
+                                handleCloseTrizModal={handleCloseTrizModal}
+                                isTrizModalOpen={isTrizModalOpen}
+                                setIsTrizModalOpen={setIsTrizModalOpen}
+>>>>>>> c0075df (Reinitialize Git repository)
                             />
                         </div>
                     </Grid>

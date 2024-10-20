@@ -13,6 +13,10 @@ export const useSummarizerState = () => {
   const [inputExpanded, setInputExpanded] = useState(true);
   const [selectedText, setSelectedText] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
+<<<<<<< HEAD
+=======
+  const [isTrizModalOpen, setIsTrizModalOpen] = useState(false);
+>>>>>>> c0075df (Reinitialize Git repository)
   const [keywords, setKeywords] = useState([]);
   const [isKeywordModalOpen, setIsKeywordModalOpen] = useState(false);
   const [selectedKeyword, setSelectedKeyword] = useState('');
@@ -44,6 +48,13 @@ export const useSummarizerState = () => {
   const [pdfSummary, setPdfSummary] = useState('');
   const [selectedLanguage, setSelectedLanguage] = useState('java'); // Add this line
   const [isLoadingTriz, setIsLoadingTriz] = useState(false);
+<<<<<<< HEAD
+=======
+  const [trizMoreSolutions, setTrizMoreSolutions] = useState('');
+  const [customPrompt, setCustomPrompt] = useState('');
+  const [selectedIeltsTypes, setSelectedIeltsTypes] = useState([]);
+  const [selectedIeltsListeningTypes, setSelectedIeltsListeningTypes] = useState([]);
+>>>>>>> c0075df (Reinitialize Git repository)
 
   useEffect(() => {
     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
@@ -95,6 +106,15 @@ export const useSummarizerState = () => {
     trizSolution, setTrizSolution,
     inputPdf, setInputPdf,
     pdfSummary, setPdfSummary,
+<<<<<<< HEAD
     selectedLanguage, setSelectedLanguage // Add this line
+=======
+    selectedLanguage, setSelectedLanguage, // Add this line
+    trizMoreSolutions, setTrizMoreSolutions,
+    isTrizModalOpen, setIsTrizModalOpen,
+    customPrompt, setCustomPrompt,
+    selectedIeltsTypes, setSelectedIeltsTypes,
+    selectedIeltsListeningTypes, setSelectedIeltsListeningTypes
+>>>>>>> c0075df (Reinitialize Git repository)
   };
 };

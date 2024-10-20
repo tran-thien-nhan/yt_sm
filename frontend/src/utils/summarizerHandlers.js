@@ -1,5 +1,9 @@
 import { exportToWord } from '../exportToWord';
+<<<<<<< HEAD
 import { handleCreateQuiz, handleSummarize, handleTrizAnalysis } from '../helper';
+=======
+import { handleCreateQuiz, handleSummarize, handleTrizAnalysis, handleMoreSolutions } from '../helper';
+>>>>>>> c0075df (Reinitialize Git repository)
 
 import axios from 'axios';
 
@@ -135,6 +139,17 @@ export const createSummarizerHandlers = (state, setState, api) => {
         setState.setIsPromptModalOpen(true);
     };
 
+<<<<<<< HEAD
+=======
+    const handleOpenTrizModal = () => {
+        setState.setIsTrizModalOpen(true);
+    };
+
+    const handleCloseTrizModal = () => {
+        setState.setIsTrizModalOpen(false);
+    };
+
+>>>>>>> c0075df (Reinitialize Git repository)
     const handleClosePromptModal = () => {
         setState.setIsPromptModalOpen(false);
     };
@@ -249,6 +264,13 @@ export const createSummarizerHandlers = (state, setState, api) => {
         setState.setIsQuizModalOpen(false);
     };
 
+<<<<<<< HEAD
+=======
+    const handleMoreSolutions = () => {
+        handleMoreSolutions(state.trizAnalysis, api, setState.setTrizSolution);
+    };
+
+>>>>>>> c0075df (Reinitialize Git repository)
     return {
         handleTextSelection,
         handleAskSelectedText,
@@ -270,6 +292,13 @@ export const createSummarizerHandlers = (state, setState, api) => {
         handleOpenHelpModal,
         handleCloseHelpModal,
         handleCreateQuizTest,
+<<<<<<< HEAD
         handleCloseQuizModal
+=======
+        handleCloseQuizModal,
+        handleMoreSolutions,
+        handleOpenTrizModal,
+        handleCloseTrizModal
+>>>>>>> c0075df (Reinitialize Git repository)
     };
 };
