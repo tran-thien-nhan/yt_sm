@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
-import { Button, Typography, Box, CircularProgress, Select, MenuItem, FormControl, InputLabel, Paper, TextField, IconButton, Snackbar } from '@mui/material';
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import { Button, Typography, Box, CircularProgress, Select, MenuItem, FormControl, InputLabel, Paper, TextField } from '@mui/material';
 import { apiKey } from '../const';
 import { formatSummary } from '../helper';
 
@@ -13,15 +12,12 @@ const ImageAnalyzer = ({ isDarkMode }) => {
   const [prompt, setPrompt] = useState('describe');
   const [isPasteEnabled, setIsPasteEnabled] = useState(false);
   const [customPrompt, setCustomPrompt] = useState('');
-  const [copyFeedback, setCopyFeedback] = useState('');
 
   const promptOptions = {
     describe: 'Hãy mô tả về hình ảnh này bằng tiếng Việt.',
     identify: 'Hãy xác định các đối tượng chính trong hình ảnh này và mô tả chúng bằng tiếng Việt.',
     analyze: 'Hãy phân tích bố cục và màu sắc của hình ảnh này bằng tiếng Việt.',
     story: 'Hãy tạo một câu chuyện ngắn dựa trên hình ảnh này bằng tiếng Việt.',
-    copy: 'copy nội dung ra đây',
-    detail: 'Hãy hướng dẫn cực kỳ cụ thể và chi tiết từng bước làm việc với hình ảnh này bằng tiếng Việt.',
     custom: 'custom',
   };
 
@@ -112,16 +108,6 @@ const ImageAnalyzer = ({ isDarkMode }) => {
     }
   };
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(result).then(() => {
-      setCopyFeedback('Copied!');
-      setTimeout(() => setCopyFeedback(''), 2000);
-    }, (err) => {
-      console.error('Could not copy text: ', err);
-      setCopyFeedback('Failed to copy');
-    });
-  };
-
   return (
     <Box sx={{ mt: 2 }}>
       <Typography variant="h6" gutterBottom>
@@ -185,8 +171,6 @@ const ImageAnalyzer = ({ isDarkMode }) => {
           <MenuItem value="identify">Xác định đối tượng</MenuItem>
           <MenuItem value="analyze">Phân tích bố cục và màu sắc</MenuItem>
           <MenuItem value="story">Tạo câu chuyện</MenuItem>
-          <MenuItem value="copy">Copy nội dung</MenuItem>
-          <MenuItem value="detail">Hướng dẫn chi tiết</MenuItem>
           <MenuItem value="custom">Nhập câu hỏi tùy chỉnh</MenuItem>
         </Select>
       </FormControl>
@@ -209,29 +193,10 @@ const ImageAnalyzer = ({ isDarkMode }) => {
       </Button>
       {isLoading && <CircularProgress sx={{ ml: 2 }} />}
       {result && (
-        <Box sx={{ mt: 2, p: 2, bgcolor: isDarkMode ? 'grey.800' : 'grey.100', borderRadius: 1, position: 'relative' }}>
+        <Box sx={{ mt: 2, p: 2, bgcolor: isDarkMode ? 'grey.800' : 'grey.100', borderRadius: 1 }}>
           <Typography variant="body1">{formatSummary(result)}</Typography>
-          <IconButton
-            onClick={handleCopy}
-            sx={{
-              position: 'absolute',
-              top: 8,
-              right: 8,
-              color: isDarkMode ? 'grey.300' : 'grey.700',
-            }}
-            aria-label="copy"
-          >
-            <ContentCopyIcon />
-          </IconButton>
         </Box>
       )}
-      <Snackbar
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-        open={!!copyFeedback}
-        message={copyFeedback}
-        autoHideDuration={2000}
-        onClose={() => setCopyFeedback('')}
-      />
     </Box>
   );
 };

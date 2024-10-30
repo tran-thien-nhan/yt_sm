@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, TextField, Typography, Box, List, ListItem, Card, CardContent, CircularProgress, Snackbar } from '@mui/material';
 import axios from 'axios';
 import { apiKey } from '../const';
-import { CodeBlock, formatSummary } from '../helper'; // Import CodeBlock component
+import { CodeBlock } from '../helper'; // Import CodeBlock component
 
 const AutoFlashcardGenerator = ({ summary, isDarkMode }) => {
     const [flashcards, setFlashcards] = useState([]);
@@ -108,9 +108,9 @@ const AutoFlashcardGenerator = ({ summary, isDarkMode }) => {
                             <Card sx={{ width: '100%' }}>
                                 <CardContent>
                                     <Typography variant="h6" gutterBottom>Câu hỏi:</Typography>
-                                    <Typography variant="body1" paragraph>{formatSummary(card.question)}</Typography>
+                                    <Typography variant="body1" paragraph>{card.question}</Typography>
                                     <Typography variant="h6" gutterBottom>Trả lời:</Typography>
-                                    <Typography variant="body1">{formatSummary(card.answer)}</Typography>
+                                    <Typography variant="body1">{card.answer}</Typography>
                                     {card.code && (
                                         <CodeBlock language="javascript">
                                             {card.code}
